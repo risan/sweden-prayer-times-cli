@@ -1,7 +1,10 @@
 # Sweden Prayer Times
 
 [![Latest Stable Version](https://img.shields.io/npm/v/sweden-prayer-times-cli.svg)](https://www.npmjs.com/package/sweden-prayer-times-cli)
+[![Node Version](https://img.shields.io/node/v/sweden-prayer-times-cli.svg)](https://www.npmjs.com/package/sweden-prayer-times-cli)
 [![Build Status](https://travis-ci.org/risan/sweden-prayer-times-cli.svg?branch=master)](https://travis-ci.org/risan/sweden-prayer-times-cli)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b7cb426fe877e512dbab/test_coverage)](https://codeclimate.com/github/risan/sweden-prayer-times-cli/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b7cb426fe877e512dbab/maintainability)](https://codeclimate.com/github/risan/sweden-prayer-times-cli/maintainability)
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/risan/sweden-prayer-times-cli)
 [![License](https://img.shields.io/npm/l/sweden-prayer-times-cli.svg)](https://www.npmjs.com/package/sweden-prayer-times-cli)
 
