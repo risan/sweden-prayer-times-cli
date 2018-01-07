@@ -24,7 +24,7 @@
     "sweden"
   ],
   "bin": {
-    "sweden-prayer-times": "src/sweden-prayer-times-cli.js"
+    "sweden-prayer-times": "dist/sweden-prayer-times-cli.js"
   },
   "engines": {
     "node": ">= 6"
