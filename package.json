@@ -1,7 +1,7 @@
 {
   "name": "sweden-prayer-times-cli",
   "description": "A command line tool to find prayer times in Sweden",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "homepage": "https://github.com/risan/sweden-prayer-times-cli#readme",
   "author": {
