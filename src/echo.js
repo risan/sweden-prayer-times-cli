@@ -1,14 +1,14 @@
-import chalk from 'chalk';
+const chalk = require('chalk');
 
-export const danger = message => chalk.red(message);
+const danger = message => chalk.red(message);
 
-export const infoBold = message => chalk.bold.magenta(message);
+const infoBold = message => chalk.bold.magenta(message);
 
-export const successBold = message => chalk.bold.green(message);
+const successBold = message => chalk.bold.green(message);
 
-export const warning = message => chalk.yellow(message);
+const warning = message => chalk.yellow(message);
 
-export default {
+module.exports = {
   danger,
   infoBold,
   successBold,

@@ -1,6 +1,6 @@
-import ora from 'ora';
-import { error as errorSymbol, success as successSymbol } from 'log-symbols';
-import { infoBold } from './echo';
+const ora = require('ora');
+const { error: errorSymbol, success: successSymbol } = require('log-symbols');
+const { infoBold } = require('./echo');
 
 const spinner = ora();
 
@@ -11,7 +11,7 @@ const stopSuccess = () => spinner.stopAndPersist({ symbol: successSymbol });
 
 const stopError = () => spinner.stopAndPersist({ symbol: errorSymbol });
 
-export default {
+module.exports = {
   start,
   stopSuccess,
   stopError

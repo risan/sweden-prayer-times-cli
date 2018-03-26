@@ -1,4 +1,4 @@
-import meow from 'meow';
+const meow = require('meow');
 
 const input = ({ defaultCity = 'Stockholm' } = {}) => {
   const cli = meow(`
@@ -14,4 +14,4 @@ const input = ({ defaultCity = 'Stockholm' } = {}) => {
   return { city };
 };
 
-export default input;
+module.exports = input;

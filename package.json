@@ -24,17 +24,15 @@
     "sweden"
   ],
   "bin": {
-    "sweden-prayer-times": "dist/sweden-prayer-times-cli.js"
+    "sweden-prayer-times": "src/cli.js"
   },
   "engines": {
     "node": ">= 6"
   },
   "scripts": {
-    "build": "NODE_ENV=build rollup -c",
-    "dev": "NODE_ENV=build rollup -c -w",
     "lint": "eslint src",
     "lint-fix": "eslint src --fix",
-    "prepublishOnly": "npm run test && npm run build",
+    "prepublishOnly": "npm run test",
     "prettier": "prettier --write '{src,tests}/**/*.js'",
     "test": "NODE_ENV=jest jest"
   },
@@ -49,10 +47,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.3.1",
     "jest": "^21.2.1",
-    "prettier": "^1.9.2",
-    "rollup": "^0.53.3",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-eslint": "^4.0.0"
+    "prettier": "^1.9.2"
   },
   "dependencies": {
     "chalk": "^2.3.0",

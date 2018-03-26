@@ -1,6 +1,7 @@
-import input from './input';
-import output from './output';
-import { danger } from './echo';
+#!/usr/bin/env node
+const input = require('./input');
+const output = require('./output');
+const { danger } = require('./echo');
 
 const { city } = input();
 

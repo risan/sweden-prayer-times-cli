@@ -1,16 +1,16 @@
-import SwedenPrayerTimes from 'sweden-prayer-times';
-import { success as successSymbol } from 'log-symbols';
-import redent from 'redent';
-import {
+const SwedenPrayerTimes = require('sweden-prayer-times');
+const { success: successSymbol } = require('log-symbols');
+const redent = require('redent');
+const {
   addHours,
   isAfter,
   isBefore,
   isEqual,
   startOfToday,
   addMinutes
-} from 'date-fns';
-import spinner from './spinner';
-import { successBold, warning } from './echo';
+} = require('date-fns');
+const spinner = require('./spinner');
+const { successBold, warning } = require('./echo');
 
 const parseTimeStr = time => {
   const parts = time.split(':').map(d => parseInt(d, 10));
@@ -76,4 +76,4 @@ const output = city =>
       });
   });
 
-export default output;
+module.exports = output;
