@@ -1,17 +1,36 @@
-const meow = require('meow');
+const { bold, yellow: arg } = require("chalk");
+const meow = require("meow");
 
-const input = ({ defaultCity = 'Stockholm' } = {}) => {
+const command = bold.blue("sweden-prayer-times");
+
+/**
+ * Get cli input.
+ *
+ * @return {Object}
+ */
+const input = () => {
   const cli = meow(`
-		Usage
-			$ sweden-prayer-times <city>
+    ${bold("Usage")}
+      $ ${command} ${arg("<city> [date]")}
 
-		Examples
-			$ sweden-prayer-times Stockholm
-	`);
+    ${bold("Arguments")}
+      - ${arg("city")}: The name of the city.
+      - ${arg(
+        "date"
+      )} (optional): The date to retrieve, default to today's date.
 
-  const city = cli.input.length > 0 ? cli.input.join(' ') : defaultCity;
+    ${bold("Examples")}
+      $ ${command} Stockholm
+      $ ${command} Uppsala 2018-08-17
+  `);
 
-  return { city };
+  if (cli.input.length === 0) {
+    throw new Error("The city argument is missing.");
+  }
+
+  const [city, date] = cli.input;
+
+  return { city, date };
 };
 
 module.exports = input;

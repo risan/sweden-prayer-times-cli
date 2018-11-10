@@ -1,79 +1,31 @@
-const SwedenPrayerTimes = require('sweden-prayer-times');
-const { success: successSymbol } = require('log-symbols');
-const redent = require('redent');
-const {
-  addHours,
-  isAfter,
-  isBefore,
-  isEqual,
-  startOfToday,
-  addMinutes
-} = require('date-fns');
-const spinner = require('./spinner');
-const { successBold, warning } = require('./echo');
+const { bold, green } = require("chalk");
+const redent = require("redent");
 
-const parseTimeStr = time => {
-  const parts = time.split(':').map(d => parseInt(d, 10));
+/**
+ * Format the prayer times output.
+ *
+ * @param {String} options.city
+ * @param {String} options.date
+ * @param {Object} options.schedule
+ * @return {String}
+ */
+const output = ({ city, date, schedule }) => {
+  const title = `☪️  ${city} Prayer Times`;
 
-  return addMinutes(addHours(startOfToday(), parts[0]), parts[1]);
+  return redent(
+    `
+    ${bold.magenta(title.toUpperCase())}
+    📆 ${bold.yellow(`Date: ${date}`)}
+
+      ${bold("Fajr")}    : ${green(schedule.fajr)}
+      ${bold("Sunrise")} : ${green(schedule.sunrise)}
+      ${bold("Dhuhr")}   : ${green(schedule.dhuhr)}
+      ${bold("Asr")}     : ${green(schedule.asr)}
+      ${bold("Maghrib")} : ${green(schedule.maghrib)}
+      ${bold("Isha")}    : ${green(schedule.isha)}
+  `,
+    2
+  );
 };
-
-const formatSchedule = (name, time, next = null) => {
-  const now = new Date();
-  const schedule = parseTimeStr(time);
-  const active = `${successBold(name)} ${successBold(time)} ${successSymbol}`;
-
-  // Schedule equals current time: active
-  if (isEqual(schedule, now)) {
-    return active;
-  }
-
-  // No next schedule
-  if (next === null) {
-    // Schedule has started: active : upcoming
-    return isBefore(schedule, now)
-      ? active
-      : `${warning(name)} ${warning(time)}`;
-  }
-
-  const nextSchedule = parseTimeStr(next);
-
-  // Schedule has passed.
-  if (isBefore(schedule, now)) {
-    // Next schedule hasn't started: active
-    return isAfter(nextSchedule, now) ? active : `${name} ${time}`;
-  }
-
-  // Schedule hasn't started: upcoming
-  return `${warning(name)} ${warning(time)}`;
-};
-
-const output = city =>
-  new Promise((resolve, reject) => {
-    const swedenPrayerTimes = new SwedenPrayerTimes();
-
-    spinner.start(city);
-
-    swedenPrayerTimes
-      .get({ city })
-      .then(({ schedule }) => {
-        spinner.stopSuccess();
-
-        const out = `
-          ${formatSchedule('Fajr', schedule.fajr, schedule.sunrise)}
-          ${formatSchedule('Sunrise', schedule.sunrise, schedule.dhuhr)}
-          ${formatSchedule('Duhr', schedule.dhuhr, schedule.asr)}
-          ${formatSchedule('Asr', schedule.asr, schedule.maghrib)}
-          ${formatSchedule('Maghrib', schedule.maghrib, schedule.isha)}
-          ${formatSchedule('Isha', schedule.isha)}
-        `;
-
-        resolve(redent(out, 2));
-      })
-      .catch(err => {
-        spinner.stopError();
-        reject(err);
-      });
-  });
 
 module.exports = output;
