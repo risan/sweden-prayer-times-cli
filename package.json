@@ -1,13 +1,13 @@
 {
   "name": "sweden-prayer-times-cli",
-  "description": "A command line tool to find prayer times in Sweden",
+  "description": "Command line tool to get prayer times in Sweden.",
   "version": "1.0.1",
   "license": "MIT",
   "homepage": "https://github.com/risan/sweden-prayer-times-cli#readme",
   "author": {
     "name": "Risan Bagja Pradana",
     "email": "risanbagja@gmail.com",
-    "url": "https://risan.io"
+    "url": "https://bagja.net"
   },
   "repository": {
     "type": "git",
@@ -17,46 +17,25 @@
     "url": "https://github.com/risan/sweden-prayer-times-cli/issues"
   },
   "keywords": [
-    "prayer",
-    "times",
-    "salah",
     "islam",
-    "sweden"
+    "prayer",
+    "sweden",
+    "salah"
   ],
   "bin": {
     "sweden-prayer-times": "src/cli.js"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">=8.0.0"
   },
   "scripts": {
-    "lint": "eslint src",
-    "lint-fix": "eslint src --fix",
-    "prepublishOnly": "npm run test",
-    "prettier": "prettier --write '{src,tests}/**/*.js'",
-    "test": "NODE_ENV=jest jest"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-jest": "^22.0.4",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^4.13.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.3.1",
-    "jest": "^21.2.1",
-    "prettier": "^1.9.2"
+    "lint": "eslint ./",
+    "lint-fix": "eslint ./ --fix",
+    "prepublishOnly": "npm run lint && npm run test",
+    "test": "jest"
   },
   "dependencies": {
-    "chalk": "^2.3.0",
-    "date-fns": "^1.29.0",
-    "log-symbols": "^2.1.0",
-    "meow": "^4.0.0",
-    "ora": "^1.3.0",
-    "redent": "^2.0.0",
-    "sweden-prayer-times": "^1.0.1",
-    "trim-newlines": "^2.0.0"
-  }
+    "sweden-prayer-times": "^2.0.0"
+  },
+  "devDependencies": {}
 }
