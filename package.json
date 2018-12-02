@@ -1,21 +1,7 @@
 {
   "name": "sweden-prayer-times-cli",
+  "version": "2.0.1",
   "description": "Command line tool to get prayer times in Sweden.",
-  "version": "2.0.0",
-  "license": "MIT",
-  "homepage": "https://github.com/risan/sweden-prayer-times-cli#readme",
-  "author": {
-    "name": "Risan Bagja Pradana",
-    "email": "risanbagja@gmail.com",
-    "url": "https://bagja.net"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/risan/sweden-prayer-times-cli.git"
-  },
-  "bugs": {
-    "url": "https://github.com/risan/sweden-prayer-times-cli/issues"
-  },
   "keywords": [
     "cli-app",
     "islam",
@@ -23,11 +9,22 @@
     "sweden",
     "salah"
   ],
+  "homepage": "https://github.com/risan/sweden-prayer-times-cli#readme",
+  "bugs": {
+    "url": "https://github.com/risan/sweden-prayer-times-cli/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Risan Bagja Pradana",
+    "email": "risanbagja@gmail.com",
+    "url": "https://bagja.net"
+  },
   "bin": {
     "sweden-prayer-times": "src/index.js"
   },
-  "engines": {
-    "node": ">=8.0.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/risan/sweden-prayer-times-cli.git"
   },
   "scripts": {
     "lint": "eslint ./",
@@ -45,11 +42,14 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.0.0",
     "execa": "^1.0.0",
     "jest": "^23.6.0",
-    "prettier": "^1.15.1"
+    "prettier": "^1.15.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }

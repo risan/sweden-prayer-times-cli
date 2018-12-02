@@ -16,7 +16,7 @@ Command line tool to get prayer times in Sweden based on the data from [Islamisk
 
 * [Node](https://nodejs.org/) version `>= 8.0.0`
 
-## Installation
+## Install
 
 Install the CLI tool globally:
 

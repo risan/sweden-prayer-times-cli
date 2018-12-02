@@ -1,7 +1,7 @@
 module.exports = {
   testEnvironment: "node",
   verbose: true,
+  resetMocks: true,
   collectCoverage: true,
-  collectCoverageFrom: ["src/*.js"],
-  coverageReporters: ["lcov"]
+  collectCoverageFrom: ["src/*.js"]
 };
