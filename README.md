@@ -1,30 +1,20 @@
 # Sweden Prayer Times CLI
 
-[![Build Status](https://flat.badgen.net/travis/risan/sweden-prayer-times-cli)](https://travis-ci.org/risan/sweden-prayer-times-cli)
-[![Test Coverage](https://flat.badgen.net/codeclimate/coverage/risan/sweden-prayer-times-cli)](https://codeclimate.com/github/risan/sweden-prayer-times-cli)
-[![Maintainability](https://flat.badgen.net/codeclimate/maintainability/risan/sweden-prayer-times-cli)](https://codeclimate.com/github/risan/sweden-prayer-times-cli)
-[![Latest Stable Version](https://flat.badgen.net/npm/v/sweden-prayer-times-cli)](https://www.npmjs.com/package/sweden-prayer-times-cli)
-[![Node Version](https://flat.badgen.net/npm/node/sweden-prayer-times-cli)](https://www.npmjs.com/package/sweden-prayer-times-cli)
-[![Code Style: Prettier](https://flat.badgen.net/badge/code%20style/prettier/ff69b4)](https://github.com/prettier/prettier)
-[![License](https://flat.badgen.net/npm/license/sweden-prayer-times-cli)](https://github.com/risan/sweden-prayer-times-cli/blob/master/LICENSE)
+[![Build Status](https://badgen.net/travis/risan/sweden-prayer-times-cli)](https://travis-ci.org/risan/sweden-prayer-times-cli)
+[![Test Covarage](https://badgen.net/codecov/c/github/risan/sweden-prayer-times-cli)](https://codecov.io/gh/risan/sweden-prayer-times-cli)
+[![Greenkeeper](https://badges.greenkeeper.io/risan/sweden-prayer-times-cli.svg)](https://greenkeeper.io)
+[![Latest Version](https://badgen.net/npm/v/sweden-prayer-times-cli)](https://www.npmjs.com/package/sweden-prayer-times-cli)
 
 Command line tool to get prayer times in Sweden based on the data from [Islamiska Förbundet](http://www.islamiskaforbundet.se)'s website.
 
 ![Sweden Prayer Times CLI](https://media.giphy.com/media/1xmStRJd8tFbsgEOrL/giphy.gif)
 
-## Requirement
-
-* [Node](https://nodejs.org/) version `>= 8.0.0`
-
-## Install
+## Installation
 
 Install the CLI tool globally:
 
 ```bash
 $ npm install --global sweden-prayer-times-cli
-
-# Or if you use Yarn
-$ yarn global add sweden-prayer-times-cli
 ```
 
 ## Usage
@@ -52,7 +42,7 @@ $ sweden-prayer-times --help
 
 ## License
 
-MIT © [Risan Bagja Pradana](https://bagja.net)
+[MIT](https://github.com/risan/sweden-prayer-times-cli/blob/master/LICENSE) © [Risan Bagja Pradana](https://bagja.net)
 
 ## Legal
 

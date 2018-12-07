@@ -1,13 +1,14 @@
 {
   "name": "sweden-prayer-times-cli",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Command line tool to get prayer times in Sweden.",
   "keywords": [
     "cli-app",
     "islam",
+    "prayer",
     "prayer-times",
-    "sweden",
-    "salah"
+    "salah",
+    "sweden"
   ],
   "homepage": "https://github.com/risan/sweden-prayer-times-cli#readme",
   "bugs": {
@@ -37,7 +38,7 @@
     "meow": "^5.0.0",
     "ora": "^3.0.0",
     "redent": "^2.0.0",
-    "sweden-prayer-times": "^2.0.0"
+    "sweden-prayer-times": "^2.0.4"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
