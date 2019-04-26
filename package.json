@@ -37,7 +37,7 @@
     "chalk": "^2.4.1",
     "meow": "^5.0.0",
     "ora": "^3.0.0",
-    "redent": "^2.0.0",
+    "redent": "^3.0.0",
     "sweden-prayer-times": "^2.0.4"
   },
   "devDependencies": {
