@@ -2,7 +2,6 @@
 
 [![Build Status](https://badgen.net/travis/risan/sweden-prayer-times-cli)](https://travis-ci.org/risan/sweden-prayer-times-cli)
 [![Test Covarage](https://badgen.net/codecov/c/github/risan/sweden-prayer-times-cli)](https://codecov.io/gh/risan/sweden-prayer-times-cli)
-[![Greenkeeper](https://badges.greenkeeper.io/risan/sweden-prayer-times-cli.svg)](https://greenkeeper.io)
 [![Latest Version](https://badgen.net/npm/v/sweden-prayer-times-cli)](https://www.npmjs.com/package/sweden-prayer-times-cli)
 
 Command line tool to get prayer times in Sweden based on the data from [Islamiska Förbundet](http://www.islamiskaforbundet.se)'s website.
